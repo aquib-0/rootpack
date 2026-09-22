@@ -2,7 +2,7 @@ import Testimonial from "../../components/Testimonial"
 
 const RatingSection = () => {
   return (
-    <div id="rating" className="w-full h-screen flex justify-center items-center gap-x-10 bg-[url(/landing_bg.jpg)] bg-cover bg-no-repeat">
+    <div id="rating" className="w-full min-h-screen flex flex-wrap justify-center items-center gap-y-4 py-20 sm:gap-x-10 bg-[url(/landing_bg.jpg)] bg-cover bg-no-repeat">
       {/* This is the rating section */}
       <Testimonial
         image={`https://github.com/shadcn.png`}

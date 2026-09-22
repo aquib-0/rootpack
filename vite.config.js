@@ -10,8 +10,4 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
   ],
-  server: {
-    host: '0.0.0.0',
-    allowedHosts: ['.trycloudflare.com'],
-  },
 })
