@@ -18,17 +18,21 @@ const RegisterForm = () => {
     const {errors} = formState;
 
     const onSubmit = async (data) => {
-    const result = await registerMe(
-        data.name,
-        data.email,
-        data.password
-    );
+        if(data.confirm_password !== data.password)
+        {
+            console.log("Confirm password and password not same");
+        }
+        const result = await registerMe(
+            data.username,
+            data.email,
+            data.password
+        );
 
-    if (result.success) {
-        navigate("/auth/login");
-    } else {
-        console.log(result.message);
-    }
+        if (result.success) {
+            navigate("/auth/login");
+        } else {
+            console.log(result.message);
+        }
 };
   return (
     <div className="w-full h-full flex justify-center items-center">
