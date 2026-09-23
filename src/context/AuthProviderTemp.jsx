@@ -85,12 +85,12 @@ export const AuthProvider = ({ children }) => {
     /*
      * REGISTER
      */
-    const registerMe = async (username, email, password) => {
+    const registerMe = async (name, email, password) => {
         try {
             setIsLoadingAuth(true);
 
             const data = await registerUser({
-                username,
+                name,
                 email,
                 password,
             });
